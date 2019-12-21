@@ -1,5 +1,9 @@
-<style>
-	h1, figure, p {
+<script>
+	import Image from 'svelte-image';
+</script>
+
+<style lang="scss">
+	h1, p {
 		text-align: center;
 		margin: 0 auto;
 	}
@@ -9,10 +13,10 @@
 		text-transform: uppercase;
 		font-weight: 700;
 		margin: 0 0 0.5em 0;
-	}
 
-	figure {
-		margin: 0 0 1em 0;
+		span {
+			color: green;
+		}
 	}
 
 	img {
@@ -36,11 +40,8 @@
 	<title>Sapper project template</title>
 </svelte:head>
 
-<h1>Great success!</h1>
+<h1>Great <span>success!</span></h1>
 
-<figure>
-	<img alt='Borat' src='great-success.png'>
-	<figcaption>HIGH FIVE!</figcaption>
-</figure>
+<Image alt='Borat' src='great-success.png' />
 
 <p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
