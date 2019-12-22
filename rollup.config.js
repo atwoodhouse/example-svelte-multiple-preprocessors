@@ -6,7 +6,7 @@ import babel from 'rollup-plugin-babel';
 import { terser } from 'rollup-plugin-terser';
 import config from 'sapper/config/rollup.js';
 import pkg from './package.json';
-import { scss } from '@kazzkiq/svelte-preprocess-scss';
+import { sass } from 'svelte-preprocess-sass';
 import image from "svelte-image";
 
 const mode = process.env.NODE_ENV;
@@ -29,7 +29,7 @@ export default {
 				dev,
 				hydratable: true,
 				emitCss: true,
-				preprocess: [ { style: scss() }, { ...image({ placeholder: 'trace' }) } ]
+				preprocess: [ { style: sass({}, { name: 'scss' }) }, { ...image({ placeholder: 'trace' }) } ]
 			}),
 			resolve({
 				browser: true,
@@ -73,7 +73,7 @@ export default {
 			svelte({
 				generate: 'ssr',
 				dev,
-				preprocess: [ { style: scss() }, { ...image({ placeholder: 'trace' }) } ]
+				preprocess: [ { style: sass({}, { name: 'scss' }) }, { ...image({ placeholder: 'trace' }) } ]
 			}),
 			resolve({
 				dedupe
