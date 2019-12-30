@@ -29,7 +29,7 @@
     "rollup-plugin-babel": "^4.0.2",
     "rollup-plugin-commonjs": "^10.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-svelte": "^5.0.1",
+    "rollup-plugin-svelte": "git+https://github.com/matyunya/rollup-plugin-svelte.git",
     "rollup-plugin-terser": "^4.0.4",
     "sapper": "^0.27.0",
     "svelte": "^3.0.0",

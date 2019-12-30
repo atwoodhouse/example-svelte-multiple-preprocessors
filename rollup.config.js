@@ -29,6 +29,7 @@ export default {
 				dev,
 				hydratable: true,
 				emitCss: true,
+				orderPreprocessors: true,
 				preprocess: [ { style: sass({}, { name: 'scss' }) }, { ...image({ placeholder: 'trace' }) } ]
 			}),
 			resolve({
