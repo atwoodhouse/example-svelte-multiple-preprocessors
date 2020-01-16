@@ -29,7 +29,7 @@ export default {
 				dev,
 				hydratable: true,
 				emitCss: true,
-				orderPreprocessors: true,
+				strictOrder: true,
 				preprocess: [ { style: sass({}, { name: 'scss' }) }, { ...image({ placeholder: 'trace' }) } ]
 			}),
 			resolve({
@@ -74,6 +74,7 @@ export default {
 			svelte({
 				generate: 'ssr',
 				dev,
+				strictOrder: true,
 				preprocess: [ { style: sass({}, { name: 'scss' }) }, { ...image({ placeholder: 'trace' }) } ]
 			}),
 			resolve({
